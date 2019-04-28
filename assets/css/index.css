@@ -10,11 +10,6 @@ body {
     font-family: 'Nunito Sans', sans-serif !important;
     text-decoration: none;
     margin: 0;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 /* NAVBAR STARTS */
@@ -156,3 +151,12 @@ body {
 }
 /*ABOUT ME ENDS*/
 
+/*PARALLAX*/
+.parallax {
+    background-image: url("/assets/images/flowers.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
