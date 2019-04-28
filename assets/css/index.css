@@ -1,3 +1,197 @@
-body{
-    background-color: green;
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+@-ms-viewport{
+    width: device-width;
 }
+
+
+
+body {
+    font-family: 'Nunito Sans', sans-serif !important;
+    text-decoration: none;
+    margin: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* NAVBAR STARTS */
+.container {
+    background-color: rgb(29, 29, 29);
+    display: table;
+    width: 100%;
+    position: fixed;
+}
+.name {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-top: 2rem;
+    float: left;
+}
+.name a {
+    margin-left: 3rem;
+    color: white;
+    text-decoration: none;
+}
+.navbar {
+    float: right;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block !important;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.navbar li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 2rem;
+    letter-spacing: 5px;
+    margin-right: 2rem;
+}
+.navbar a:hover {
+    color: #2ecc71 !important;
+    font-weight: bold;
+}
+
+/* HAMBURGER ICON */
+.navbar-btn{
+    padding-inline-start: 1px !important;
+    float: right;
+    display: none;
+}
+.ham_menu {
+    width: 35px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 0.5rem 0;
+    border-radius: 1px;
+    display: none;
+}
+/* HAMBURGER ICON */
+
+/*Javascript*/
+.hidehamburger{
+    visibility: hidden;
+}
+.exit-img{
+    background-image: url(/assets/images/exit.png);
+    background-size: cover;
+}
+/* NAVBAR ENDS */
+
+/* RESPONSIVE LAYER */
+@media screen and (max-width:840px) {
+    .navbar li{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: block;
+    }
+    .ham_menu{
+        display: block !important;
+    }
+    .navbar-btn{
+        display: block;
+        margin-top: -2rem;
+    }
+    .navbar{
+        width: 100%;
+    }
+    .full-navbar{
+        display: none;
+    }
+  }
+  
+  @media screen and (min-width:840px) {
+    .full-navbar{
+        display: block !important;
+    }
+}
+/* RESPONSIVE LAYER ENDS*/
+
+/*ABOUT ME*/
+.about-me {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about-me h2 {
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about-me h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    margin-left: -40px;
+    left: 50%;
+    bottom: 0px;
+    background-color: pink;
+}
+
+.about-me .col-left, .about-me .col-right{
+    width: 40%;
+    float: left;
+}
+
+
+.about-me .col-left {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.about-me .col-left img {
+    max-width: 100%
+}
+/*ABOUT ME ENDS*/
+
+/*Parallax*/
+header{
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+header h1 {
+    margin-top: -100px;
+}
+header, header:before{
+    background: 50% 50% / cover;
+}
+header::before{
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(1.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+header * { 
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+} 
+
